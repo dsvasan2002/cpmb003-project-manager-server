@@ -5,7 +5,7 @@ var UserSchema = mongoose.Schema({
     lastName: {type: String, require: true},
     employeeId: {type: String, require: true},
     projectId: {type: mongoose.Schema.ObjectId, ref: 'Project', required: true},
-    taskId: {type: mongoose.Schema.ObjectId, ref: 'Task', required: false},
+    taskId: [ {type: mongoose.Schema.ObjectId, ref: 'Task', required: false}]
 
 })
 
