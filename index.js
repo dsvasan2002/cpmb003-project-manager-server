@@ -9,7 +9,7 @@ var host = 'localhost';
 server.use("/", express.static('web'));
 server.use(bodyParser.json());
 server.use(cors());
-var taskRouter = require('./routes/task.router');
+var taskRouter = require('./routes/task');
 server.use("/api", taskRouter);
 
 
