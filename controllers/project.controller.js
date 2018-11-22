@@ -24,5 +24,43 @@ module.exports = {
         res.status(201).json({success: true, data: projects});
       }
     })
-  }
+  },
+  getProject: function(req, res){
+    let id = req.params.id;
+    Project.findOne({_id:id}).exec(function(err, project){
+        if(!!err) {
+            console.error(err);
+            res.json({success: false, message: err.message});
+        } else {
+            res.json({success: true, data: project});
+        }
+    })
+},
+
+addUpdProject: function(req, res) {
+    let project = req.body;
+    let id = req.params.id;
+
+    Project.findByIdAndUpdate(id, {$set: project}, {}, function(err, project){
+        if(!!err) {
+            console.error(err);
+            res.json({success: false, message: err.message});
+        } else {
+            res.json({success: true, data: project});
+        }
+    })
+},
+
+delProject: function(req, res){
+    let id = req.params.id;
+
+    Project.remove({_id: id}, function(err){
+        if(!!err){
+            console.error(err);
+            res.json({success: false, message: err.message});
+        } else {
+            res.json({success: true});
+        }
+    })
+}
 }

@@ -9,9 +9,12 @@ var host = 'localhost';
 server.use("/", express.static('web'));
 server.use(bodyParser.json());
 server.use(cors());
-var taskRouter = require('./routes/task');
+var taskRouter = require('./routes/task.router');
 server.use("/api", taskRouter);
-
+var projectRouter = require('./routes/project.router');
+server.use("/api", projectRouter);
+var userRouter = require('./routes/user.router');
+server.use("/api", userRouter);
 
 server.listen(port, host, function(err) {
     if (!!err) {
