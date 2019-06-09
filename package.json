@@ -3,18 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "hbs": "~4.0.1",
+    "hbs": "^4.0.4",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "cors": "^2.8.5",
-    "mongoose": "^5.3.8"
+    "mongoose": "^5.3.8",
+    "mongoose-sequence": "^5.0.1",
+    "mongoose-sequence-plugin": "^1.0.5",
+    "morgan": "~1.9.0"
   },
   "description": "Project-Manager CPMB003 Project",
   "main": "index.js",

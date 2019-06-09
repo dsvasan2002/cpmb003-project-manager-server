@@ -1,4 +1,5 @@
 const Project = require('./../model/project.js');
+const mongoose = require('mongoose');
 
 module.exports = {
   create: function(req, res) {
@@ -15,7 +16,7 @@ module.exports = {
   },
   
   getAll: function (req, res) {
-    console.log(req);
+    console.log(req.body);
     Project.find({}).exec(function(err, projects){
       if (!!err) {
         console.log(err);
@@ -26,6 +27,7 @@ module.exports = {
     })
   },
   getProject: function(req, res){
+    console.log(req.body);
     let id = req.params.id;
     Project.findOne({_id:id}).exec(function(err, project){
         if(!!err) {
@@ -38,6 +40,8 @@ module.exports = {
 },
 
 addUpdProject: function(req, res) {
+  console.log(req.body);
+
     let project = req.body;
     let id = req.params.id;
 
@@ -52,6 +56,8 @@ addUpdProject: function(req, res) {
 },
 
 delProject: function(req, res){
+  console.log(req.body);
+
     let id = req.params.id;
 
     Project.remove({_id: id}, function(err){

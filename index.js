@@ -5,16 +5,18 @@ var server = express();
 var port = 3636;
 var host = 'localhost';
 
+var taskRouter = require('./routes/task.router');
+var projectRouter = require('./routes/project.router');
+var userRouter = require('./routes/user.router');
+var parentRouter = require('./routes/parent.router');
 
 server.use("/", express.static('web'));
 server.use(bodyParser.json());
 server.use(cors());
-var taskRouter = require('./routes/task.router');
-server.use("/api", taskRouter);
-var projectRouter = require('./routes/project.router');
-server.use("/api", projectRouter);
-var userRouter = require('./routes/user.router');
-server.use("/api", userRouter);
+server.use('/api/tasks', taskRouter);
+server.use('/api/projects', projectRouter);
+server.use('/api/users', userRouter);
+server.use('/api/parenttasks', parentRouter);
 
 server.listen(port, host, function(err) {
     if (!!err) {
@@ -26,8 +28,3 @@ server.listen(port, host, function(err) {
         require("./db/database")
 });
 
-//server.post()
-
-
-
-//console.log(typeof express);
