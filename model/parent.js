@@ -3,9 +3,9 @@ const autoIncrement= require('mongoose-sequence')(mongoose);
 
 
 var ParentTaskSchema = new mongoose.Schema({
-    parentID        : {type: Number },
-    parentTask      : {type: String, required: true},
-    projectID       : {type: Number, default: null}  
+    parentID: {type: Number },
+    parentTask: {type: String, required: true},
+    projectID: {type: Number, default: null}  
 })
 
 ParentTaskSchema.plugin(autoIncrement, {inc_field: 'parentId'});

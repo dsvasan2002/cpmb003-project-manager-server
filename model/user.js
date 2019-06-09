@@ -5,13 +5,13 @@ var UserSchema = mongoose.Schema({
     userId: {type: Number, required: false},
     firstName: {type: String, require: true},
     lastName: {type: String, require: true},
-    employeeId: {type: Number, require: true},
+    employeeId: {type: Number, require: true, unique: true, dropDups: true},
     projectId: {type: mongoose.Schema.ObjectId, ref: 'Project', required: false},
     taskId: [ {type: mongoose.Schema.ObjectId, ref: 'Task', required: false}]
 
 })
 
-UserSchema.plugin (autoIncrement, {inc_field : 'userID'})
+UserSchema.plugin (autoIncrement, {inc_field : 'userId'})
 
 var User = mongoose.model('User', UserSchema);
 module.exports = User;

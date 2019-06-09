@@ -4,7 +4,7 @@ var router = express.Router();
 const Task = require("../model/task");
 const TaskController = require("../controllers/task.controller");
 
-router.post("/add", TaskController.create);
+router.post("/create", TaskController.create);
 router.get("/", TaskController.getAll);
 router.get("/:id", TaskController.getTask);
 router.put("/:id", TaskController.addUpdTask);

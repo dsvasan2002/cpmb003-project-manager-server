@@ -28,8 +28,8 @@ module.exports = {
   },
   getProject: function(req, res){
     console.log(req.body);
-    let id = req.params.id;
-    Project.findOne({_id:id}).exec(function(err, project){
+    let _projectId = req.params.id;
+    Project.findOne({projectId:_projectId}).exec(function(err, project){
         if(!!err) {
             console.error(err);
             res.json({success: false, message: err.message});
@@ -43,9 +43,9 @@ addUpdProject: function(req, res) {
   console.log(req.body);
 
     let project = req.body;
-    let id = req.params.id;
+    let projectId = req.params.id;
 
-    Project.findByIdAndUpdate(id, {$set: project}, {}, function(err, project){
+    Project.findOneAndUpdate(projectId, {$set: project}, {}, function(err, project){
         if(!!err) {
             console.error(err);
             res.json({success: false, message: err.message});
@@ -58,9 +58,9 @@ addUpdProject: function(req, res) {
 delProject: function(req, res){
   console.log(req.body);
 
-    let id = req.params.id;
+  let projectId = req.params.id;
 
-    Project.remove({_id: id}, function(err){
+  Project.findOneAndRemove({projectId: projectId}, function(err){
         if(!!err){
             console.error(err);
             res.json({success: false, message: err.message});

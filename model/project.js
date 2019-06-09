@@ -18,7 +18,7 @@ var ProjectSchema = new mongoose.Schema({
 
 })
 
-ProjectSchema.plugin(autoIncrement, { inc_field: 'projectID' })
+ProjectSchema.plugin(autoIncrement, { inc_field: 'projectId' })
 
 var Project = mongoose.model('Project', ProjectSchema);
 module.exports = Project;

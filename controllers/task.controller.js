@@ -26,8 +26,8 @@ module.exports = {
     },
 
     getTask: function(req, res){
-        let id = req.params.id;
-        Task.findOne({_id:id}).exec(function(err, task){
+        let taskId = req.params.id;
+        Task.findOne({taskId:taskId}).exec(function(err, task){
             if(!!err) {
                 console.error(err);
                 res.json({success: false, message: err.message});
@@ -39,9 +39,9 @@ module.exports = {
 
     addUpdTask: function(req, res) {
         let task = req.body;
-        let id = req.params.id;
+        let taskId = req.params.id;
 
-        Task.findByIdAndUpdate(id, {$set: task}, {}, function(err, task){
+        Task.findOneAndUpdate(taskId, {$set: task}, {}, function(err, task){
             if(!!err) {
                 console.error(err);
                 res.json({success: false, message: err.message});
@@ -52,9 +52,9 @@ module.exports = {
     },
 
     delTask: function(req, res){
-        let id = req.params.id;
+        let taskId = req.params.id;
 
-        Task.remove({_id: id}, function(err){
+        Task.findOneAndRemove({taskId: taskId}, function(err){
             if(!!err){
                 console.error(err);
                 res.json({success: false, message: err.message});
