@@ -9,7 +9,7 @@ var TaskSchema = new mongoose.Schema({
     startDate: { type: Date, default: Date.now },
     endDate: { type: Date, default: Date.now },
     priority: { type: Number, required: true, min: 0, max: 30 },
-    status: { type: Boolean, default: false },
+    hasFinished: { type: Boolean, default: false },
     User: {type: mongoose.Schema.Types.ObjectId, ref: 'User' }    
 })
 

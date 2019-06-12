@@ -5,7 +5,7 @@ module.exports = {
         var user = new User(req.body);
         user.save(function(err){
             if (!!err) {
-                res.json({success: true, message: err.message});
+                res.json({success: false, message: err.message});
             } else {
                 res.status(201).json({success: true});
             }
