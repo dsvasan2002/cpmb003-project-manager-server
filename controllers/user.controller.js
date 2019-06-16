@@ -14,7 +14,6 @@ module.exports = {
     getAll: function(req, res) {
         User.find({}).exec(function(err, users){
             if(!!err) {
-                console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.json({success: true, data: users});
