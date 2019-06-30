@@ -72,7 +72,6 @@ module.exports = {
             task.endDate    = req.body.endDate;
             task.hasFinished= req.body.hasFinished;
 
-
             task.save((err, task) => {
             if (err) {
                 res.json({success: false, message: err.message});
