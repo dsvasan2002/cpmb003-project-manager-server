@@ -4,8 +4,8 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var server = express();
 var port = 3636;
-// var host = 'localhost';
-var host = '0.0.0.0';
+var host = 'localhost';
+// var host = '0.0.0.0';
 
 var taskRouter = require('./routes/task.router');
 var projectRouter = require('./routes/project.router');
