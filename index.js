@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var server = express();
 var port = 3636;
-var host = 'localhost';
+// var host = 'localhost';
+var host = '0.0.0.0';
 
 var taskRouter = require('./routes/task.router');
 var projectRouter = require('./routes/project.router');
@@ -23,9 +24,10 @@ server.listen(port, host, function(err) {
     if (!!err) {
         console.log('Error in starting the server');
         throw err;
-    }
-    console.log('server is running at '+host+':'+port);
+    } else {
+        console.log('server is running at '+host+':'+port);
         // database connection
         require("./db/database")
+    }
 });
 
