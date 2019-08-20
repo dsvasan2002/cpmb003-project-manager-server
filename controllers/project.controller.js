@@ -16,7 +16,7 @@ module.exports = {
   getAll: function (req, res) {
     Project.find({}).populate('Tasks', ['taskId', 'hasFinished']).exec(function(err, projects){
       if (!!err) {
-        console.log(err);
+        // console.log(err);
         res.json({success: false, message: err.message});
       } else {
         res.status(201).json({success: true, data: projects});
@@ -24,7 +24,7 @@ module.exports = {
     })
   },
   getProject: function(req, res){
-    console.log(req.body);
+    // console.log(req.body);
     let _projectId = req.params.id;
     Project.findOne({projectId:_projectId}).exec(function(err, project){
         if(!!err) {

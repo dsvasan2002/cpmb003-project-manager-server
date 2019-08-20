@@ -1,0 +1,50 @@
+C:\Users\T440>C:\Users\T440\Documents\JMeter\apache-jmeter-5.1.1\bin\jmeter -n -t C:\Users\T440\Documents\GitHub\cpmb003-project-manager-server\CPMB003_ProjectManager_Server_Test.jmx -l C:\Users\T440\Documents\GitHub\cpmb003-project-manager-server\CPMB003_ProjectManager_Server_Jmeter_TestResult.jtl
+Creating summariser <summary>
+Created the tree successfully using C:\Users\T440\Documents\GitHub\cpmb003-project-manager-server\CPMB003_ProjectManager_Server_Test.jmx
+Starting the test @ Thu Aug 15 20:17:10 EDT 2019 (1565914630151)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+Warning: Nashorn engine is planned to be removed from a future JDK release
+summary +   3280 in 00:00:19 =  172.8/s Avg:   264 Min:     6 Max:   884 Err:     0 (0.00%) Active: 95 Started: 95 Finished: 0
+summary +   6213 in 00:00:30 =  207.5/s Avg:   797 Min:   119 Max:  2075 Err:     0 (0.00%) Active: 245 Started: 245 Finished: 0
+summary =   9493 in 00:00:49 =  194.1/s Avg:   613 Min:     6 Max:  2075 Err:     0 (0.00%)
+summary +   6255 in 00:00:30 =  208.8/s Avg:  1475 Min:    97 Max:  4048 Err:    98 (1.57%) Active: 394 Started: 394 Finished: 0
+summary =  15748 in 00:01:19 =  199.6/s Avg:   955 Min:     6 Max:  4048 Err:    98 (0.62%)
+summary +   7476 in 00:00:30 =  248.6/s Avg:  1849 Min:    86 Max:  4681 Err:  2048 (27.39%) Active: 500 Started: 500 Finished: 0
+summary =  23224 in 00:01:49 =  213.2/s Avg:  1243 Min:     6 Max:  4681 Err:  2146 (9.24%)
+summary +   8481 in 00:00:30 =  283.4/s Avg:  1766 Min:   118 Max:  4857 Err:  3016 (35.56%) Active: 500 Started: 500 Finished: 0
+summary =  31705 in 00:02:19 =  228.3/s Avg:  1383 Min:     6 Max:  4857 Err:  5162 (16.28%)
+summary +   8679 in 00:00:30 =  289.3/s Avg:  1717 Min:   140 Max:  4709 Err:  2979 (34.32%) Active: 500 Started: 500 Finished: 0
+summary =  40384 in 00:02:49 =  239.1/s Avg:  1455 Min:     6 Max:  4857 Err:  8141 (20.16%)
+summary +   8428 in 00:00:30 =  280.9/s Avg:  1782 Min:   109 Max:  4725 Err:  2918 (34.62%) Active: 500 Started: 500 Finished: 0
+summary =  48812 in 00:03:19 =  245.4/s Avg:  1511 Min:     6 Max:  4857 Err: 11059 (22.66%)
+summary +   8371 in 00:00:30 =  279.0/s Avg:  1802 Min:   104 Max:  4727 Err:  2921 (34.89%) Active: 500 Started: 500 Finished: 0
+summary =  57183 in 00:03:49 =  249.8/s Avg:  1554 Min:     6 Max:  4857 Err: 13980 (24.45%)
+summary +   8075 in 00:00:30 =  269.1/s Avg:  1847 Min:    75 Max:  4794 Err:  2546 (31.53%) Active: 500 Started: 500 Finished: 0
+summary =  65258 in 00:04:19 =  252.1/s Avg:  1590 Min:     6 Max:  4857 Err: 16526 (25.32%)
+summary +   8268 in 00:00:30 =  275.5/s Avg:  1810 Min:   116 Max:  4653 Err:  2956 (35.75%) Active: 500 Started: 500 Finished: 0
+summary =  73526 in 00:04:49 =  254.5/s Avg:  1615 Min:     6 Max:  4857 Err: 19482 (26.50%)
+summary +   8366 in 00:00:30 =  278.9/s Avg:  1795 Min:    99 Max:  5118 Err:  2844 (33.99%) Active: 500 Started: 500 Finished: 0
+summary =  81892 in 00:05:19 =  256.8/s Avg:  1633 Min:     6 Max:  5118 Err: 22326 (27.26%)
+summary +   8263 in 00:00:30 =  275.4/s Avg:  1825 Min:    89 Max:  4771 Err:  2678 (32.41%) Active: 500 Started: 500 Finished: 0
+summary =  90155 in 00:05:49 =  258.4/s Avg:  1651 Min:     6 Max:  5118 Err: 25004 (27.73%)
+summary +   8207 in 00:00:30 =  273.6/s Avg:  1816 Min:   113 Max:  5107 Err:  3129 (38.13%) Active: 500 Started: 500 Finished: 0
+summary =  98362 in 00:06:19 =  259.6/s Avg:  1665 Min:     6 Max:  5118 Err: 28133 (28.60%)
+summary +   8334 in 00:00:30 =  277.8/s Avg:  1801 Min:   103 Max:  4603 Err:  2832 (33.98%) Active: 500 Started: 500 Finished: 0
+summary = 106696 in 00:06:49 =  260.9/s Avg:  1675 Min:     6 Max:  5118 Err: 30965 (29.02%)
+summary +   8312 in 00:00:30 =  277.1/s Avg:  1796 Min:    35 Max:  4736 Err:  3128 (37.63%) Active: 500 Started: 500 Finished: 0
+summary = 115008 in 00:07:19 =  262.0/s Avg:  1684 Min:     6 Max:  5118 Err: 34093 (29.64%)
+summary +   8330 in 00:00:30 =  277.7/s Avg:  1815 Min:   108 Max:  4730 Err:  2892 (34.72%) Active: 500 Started: 500 Finished: 0
+summary = 123338 in 00:07:49 =  263.0/s Avg:  1693 Min:     6 Max:  5118 Err: 36985 (29.99%)
+summary +   8175 in 00:00:30 =  272.5/s Avg:  1829 Min:   125 Max:  4851 Err:  2814 (34.42%) Active: 500 Started: 500 Finished: 0
+summary = 131513 in 00:08:19 =  263.6/s Avg:  1701 Min:     6 Max:  5118 Err: 39799 (30.26%)
+summary +   8070 in 00:00:30 =  269.0/s Avg:  1863 Min:   154 Max:  4767 Err:  2775 (34.39%) Active: 500 Started: 500 Finished: 0
+summary = 139583 in 00:08:49 =  263.9/s Avg:  1711 Min:     6 Max:  5118 Err: 42574 (30.50%)
+summary +   8203 in 00:00:30 =  273.4/s Avg:  1816 Min:   111 Max:  4704 Err:  2707 (33.00%) Active: 500 Started: 500 Finished: 0
+summary = 147786 in 00:09:19 =  264.4/s Avg:  1716 Min:     6 Max:  5118 Err: 45281 (30.64%)
+summary +   8168 in 00:00:30 =  271.6/s Avg:  1852 Min:   120 Max:  4778 Err:  2952 (36.14%) Active: 500 Started: 500 Finished: 0
+summary = 155954 in 00:09:49 =  264.8/s Avg:  1724 Min:     6 Max:  5118 Err: 48233 (30.93%)
+summary +   3423 in 00:00:15 =  234.7/s Avg:  2006 Min:   162 Max:  5086 Err:  1081 (31.58%) Active: 0 Started: 500 Finished: 500
+summary = 159377 in 00:10:04 =  264.1/s Avg:  1730 Min:     6 Max:  5118 Err: 49314 (30.94%)
+Tidying up ...    @ Thu Aug 15 20:27:14 EDT 2019 (1565915234672)
+... end of run
+C:\Users\T440>

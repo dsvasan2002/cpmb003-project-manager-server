@@ -21,7 +21,7 @@ module.exports = {
         })
     },
     getUser: function(req, res){
-        console.log(req.body);
+        // console.log(req.body);
         let userId = req.params.id;
         User.findOne({userId:userId}).exec(function(err, user){
             if(!!err) {

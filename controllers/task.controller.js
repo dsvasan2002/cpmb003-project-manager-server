@@ -9,7 +9,7 @@ module.exports = {
         var task = new Task(req.body);
         task.save(function(err){
             if (!!err) {
-                console.error(err);
+                // console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.status(201).json({success: true})
@@ -17,14 +17,14 @@ module.exports = {
         } )
     },
     getAll: function(req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         var query = Task.find();
         query.populate('project').populate('user').populate('parentTask');
 
         // Task.find({}).exec(function(err, tasks){
         query.exec(function(err, tasks){
                 if(!!err) {
-                console.error(err);
+                // console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.json({success: true, data: tasks});
@@ -36,7 +36,7 @@ module.exports = {
         let taskId = req.params.id;
         Task.findOne({taskId:taskId}).populate('project').populate('user').populate('parentTask').exec(function(err, task){
             if(!!err) {
-                console.error(err);
+                // console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.json({success: true, data: task});
@@ -50,7 +50,7 @@ module.exports = {
 
         Task.findOneAndUpdate(taskId, {$set: task}, {}, function(err, task){
             if(!!err) {
-                console.error(err);
+                // console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.json({success: true, data: task});
@@ -88,7 +88,7 @@ module.exports = {
 
         Task.findOneAndRemove({taskId: taskId}, function(err){
             if(!!err){
-                console.error(err);
+                // console.error(err);
                 res.json({success: false, message: err.message});
             } else {
                 res.json({success: true});
