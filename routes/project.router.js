@@ -5,6 +5,7 @@ const ProjectController = require("../controllers/project.controller");
 
 router.post("/", ProjectController.create);
 router.post("/create", ProjectController.create);
+router.post("/update", ProjectController.updateProject);
 router.get("/", ProjectController.getAll);
 router.get("/:id", ProjectController.getProject);
 router.put("/:id", ProjectController.addUpdProject);
