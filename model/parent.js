@@ -5,7 +5,7 @@ const autoIncrement= require('mongoose-sequence')(mongoose);
 
 var ParentTaskSchema = new mongoose.Schema({
     parentTaskId: {type: Number },
-    parentTaskName: {type: String, required: true},
+    parentTaskName: {type: String, required: true, unique: true, dropDups: true},
     projectId: {type: Number, default: null}  
 })
 
