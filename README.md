@@ -1,1 +1,1 @@
-# cpmb003-project-manager
+# cpmb003-project-manager-server
