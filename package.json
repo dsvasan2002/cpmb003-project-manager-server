@@ -13,7 +13,7 @@
     "express": "~4.16.0",
     "hbs": "^4.0.4",
     "http-errors": "~1.6.2",
-    "mongoose": "^5.3.8",
+    "mongoose": "^5.7.5",
     "mongoose-sequence": "^5.0.1",
     "mongoose-sequence-plugin": "^1.0.5",
     "morgan": "~1.9.0"
